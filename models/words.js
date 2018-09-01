@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     definition: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     },
     videolink: {
       type: DataType.STRING,
