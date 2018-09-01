@@ -1,17 +1,4 @@
+-- Drops existing 'zasl_db' if it exists. --
 DROP DATABASE IF EXISTS zasl_db;
+-- Creates 'zasl_db'. --
 CREATE DATABASE zasl_db;
-
-USE zasl_db;
-
-CREATE TABLE zasl_words
-(
-    word VARCHAR(255) NOT NULL,
-    word_def VARCHAR(255) NOT NULL,
-    vid_link VARCHAR(255) NOT NULL,
-    category VARCHAR(10) NOT NULL,
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  	date_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-);
-
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
