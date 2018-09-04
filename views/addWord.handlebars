@@ -33,3 +33,25 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $("#addWordSubmit").on("click", function() {
+            console.log("working")
+            event.preventDefault();
+            var newWord = {
+                word: $("#wordInput").val().trim(),
+                definition: $("#definitionInput").val().trim(),
+                signText: $("#signTextInput").val().trim(),
+                signVideo: $("#signVideoInput").val().trim(),
+                firstLetter: $("#wordInput").val().trim().charAt(0)
+            };
+            $.ajax({
+                url: "/addWord/",
+                method: "POST",
+                data: newWord
+            }).then(function() {
+                window.location.replace("/");
+            })
+        })
+    });
+</script> 

@@ -57,7 +57,10 @@
     </div>
     <div id="wordView" class="col-8">
       <div class="bg-dark border rounded border-warning text-light p-2" id="rightCol">
-      <p>Here is where words can be viewed</p>
+          {{#each word}}
+          <p><a href="/viewWord/{{word}}">{{word}}</a></p>
+          <br>
+          {{/each}}
       </div>
     </div>
   </div>

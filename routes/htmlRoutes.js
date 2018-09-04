@@ -10,10 +10,21 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  app.get("/viewWord/:word", function(req, res) {
+    db.Word.findOne({ where: { word: req.params.word } }).then(function(data) {
+      res.render("viewWord", {
+        word: data.word,
+        definition: data.definition,
+        instructions: data.instructions,
+        videoUrl: data.videoUrl
+      });
+    });
+  });
+  
+  app.get("/viewLetter/:letter", function(req, res) {
+    db.Word.findAll({ where: { firstLetter: req.params.letter } }).then(function(data) {
+      res.render("viewLetter", {
+        word: data
       });
     });
   });
