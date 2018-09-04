@@ -1,5 +1,5 @@
 {
-  "name": "Project 2 Team 6",
+  "name": "Project2Team6",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -15,6 +15,7 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "jquery": "^3.3.1",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
   },
