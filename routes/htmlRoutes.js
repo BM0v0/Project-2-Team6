@@ -20,13 +20,14 @@ module.exports = function(app) {
       });
     });
   });
-  
   app.get("/viewLetter/:letter", function(req, res) {
-    db.Word.findAll({ where: { firstLetter: req.params.letter } }).then(function(data) {
-      res.render("viewLetter", {
-        word: data
-      });
-    });
+    db.Word.findAll({ where: { firstLetter: req.params.letter } }).then(
+      function(data) {
+        res.render("viewLetter", {
+          word: data
+        });
+      }
+    );
   });
 
   // Render 404 page for any unmatched routes
