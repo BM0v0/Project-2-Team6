@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "zasl_db",
+    "database": "dictionary_db",
     "host": "localhost",
     "dialect": "mysql"
   },
