@@ -1,5 +1,5 @@
 {
-  "name": "Project2Team6",
+  "name": "project2team6",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -27,5 +27,20 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BM0v0/Project-2-Team6.git"
+  },
+  "keywords": [
+    "Zambia"
+  ],
+  "author": "Brandon, Milo, Elijah, Tra",
+  "bugs": {
+    "url": "https://github.com/BM0v0/Project-2-Team6/issues"
+  },
+  "homepage": "https://github.com/BM0v0/Project-2-Team6#readme"
 }
