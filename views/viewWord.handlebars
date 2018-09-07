@@ -57,25 +57,25 @@
     </div>
     <div id="wordView" class="col-8">
       <div class="bg-dark border rounded border-warning text-light p-2" id="rightCol">
-      <h1>{{word}}</h1>
-      <br>
-      <p>{{definition}}</p>
-      <br>
-      <p>{{videoUrl}}</p>
-      <br>
-      <p>{{instructions}}</p>
+        <h1>{{word}}</h1>
+        <br>
+        <p>{{definition}}</p>
+        <br>
+        <p>{{{videoUrl}}}</p>
+        <br>
+        <p>{{instructions}}</p>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  $("#wordSearchSubmit").on("click", function() {
+  $("#wordSearchSubmit").on("click", function () {
     event.preventDefault();
     var searchQuery = $("#wordSearchInput").val().trim();
     window.location.replace("/viewWord/" + searchQuery);
   })
-  $("#letterSelectSubmit").on("click", function() {
+  $("#letterSelectSubmit").on("click", function () {
     event.preventDefault();
     var letter = $("#letterSelectInput").val();
     window.location.replace("/viewLetter/" + letter);
