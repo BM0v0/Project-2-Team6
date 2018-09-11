@@ -1,8 +1,8 @@
 <!-- Image and text -->
 <nav class="navbar">
   <a class="navbar-brand" href="#">
-    <img src="../public/images/zambiaFlag.png" width="40" height="40" class="nav-link d-inline-block align-top" id="navText" href="layouts/main.handlebars">
-    ZSL Dictionary
+    <img src="../public/images/zambiaFlag.png" width="40" height="40" class="nav-link d-inline-block align-top" id="navText"
+      href="layouts/main.handlebars"> ZSL Dictionary
   </a>
 </nav>
 
@@ -65,19 +65,19 @@
     </div>
     <div id="wordView" class="col-8">
       <div class="p-2" id="rightCol">
-      <p>Here is where words can be viewed</p>
+        <p>Here is where words can be viewed</p>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  $("#wordSearchSubmit").on("click", function() {
+  $("#wordSearchSubmit").on("click", function () {
     event.preventDefault();
     var searchQuery = $("#wordSearchInput").val().trim();
     window.location.replace("/viewWord/" + searchQuery);
   })
-  $("#letterSelectSubmit").on("click", function() {
+  $("#letterSelectSubmit").on("click", function () {
     event.preventDefault();
     var letter = $("#letterSelectInput").val();
     window.location.replace("/viewLetter/" + letter);
