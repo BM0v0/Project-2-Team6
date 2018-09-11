@@ -1,25 +1,33 @@
+<!-- Image and text -->
+<nav class="navbar">
+  <a class="navbar-brand" href="#">
+    <img src="../public/images/zambiaFlag.png" width="40" height="40" class="nav-link d-inline-block align-top" id="navText" href="layouts/main.handlebars">
+    ZSL Dictionary
+  </a>
+</nav>
+
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="jumbotron bg-dark border border-danger">
-        <h1 class="display-4 text-success">Welcome to the Zambian Sign Language Dictionary!</h1>
-        <p class="lead text-warning">This website is intended to help hearing-impaired Zambians communicate more freely.</p>
+      <div class="jumbotron">
+        <h1 class="display-4 welcome">Welcome to the Zambian Sign Language Dictionary!</h1>
+        <p class="lead">This website is intended to help hearing-impaired Zambians communicate more freely.</p>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-4">
-      <div id="leftCol" class="bg-dark border rounded border-warning text-light p-2">
+      <div id="leftCol" class="p-2">
         <form class="form-inline">
           <div class="form-group">
-            <input type="text" class="form-control bg-light text-dark" id="wordSearchInput" placeholder="Search...">
+            <input type="text" class="form-control" id="wordSearchInput" placeholder="Search...">
           </div>
-          <button type="submit" id="wordSearchSubmit" class="btn btn-success ml-2 border border-danger">Search</button>
+          <button type="submit" id="wordSearchSubmit" class="btn search">Search</button>
         </form>
         <br>
         <form>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Jump to a Letter:</label>
+          <div id="alphabetForm" class="form-group">
+            <label for="exampleFormControlSelect1" id="jump">Jump to a Letter:</label>
             <select multiple class="form-control" id="letterSelectInput">
               <option>A</option>
               <option>B</option>
@@ -49,14 +57,14 @@
               <option>Z</option>
             </select>
           </div>
-          <button type="submit" id="letterSelectSubmit" class="btn btn-success border border-danger">Go</button>
+          <button type="submit" id="letterSelectSubmit" class="btn">Go</button>
         </form>
         <br>
-        <a href="/addWord/"><button id="createWordBtn" class="btn btn-light border border-success">Add Your Own Word</button></a>
+        <a href="/addWord/"><button id="createWordBtn" class="btn">Add Your Own Word</button></a>
       </div>
     </div>
     <div id="wordView" class="col-8">
-      <div class="bg-dark border rounded border-warning text-light p-2" id="rightCol">
+      <div class="p-2" id="rightCol">
       <p>Here is where words can be viewed</p>
       </div>
     </div>
