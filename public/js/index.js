@@ -3,6 +3,7 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var authorized = false;
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -97,3 +98,41 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// log in before add new words
+$(".login-submit").on('click', function() {
+  console.log('form submit clicked');
+  $.ajax({
+    type: "post",
+    url: "/login/user",
+    data: {
+      username: $("#username").val().trim(),
+      password: $("#password").val().trim()
+    },
+    statusCode: {
+      409: function(res) {
+        console.log('you are not approved');
+      }
+    }
+  }).done(function(results) {
+    console.log('results', results);
+    if (results.user === 'approved') {
+      console.log('you are approved!');
+      authorized = true;
+      $('#exampleModal').modal('hide');
+      window.location.href = '/addWord';
+    // now allow user to enter a word in the dictionary
+} else {
+      console.log('sorry you are not approved');
+    }
+  })
+})
+
+$("#createWordBtn").on('click', function() {
+  if (!authorized) {
+  console.log('open modal');
+  $("#exampleModal").modal('show');
+  } else {
+    window.location.href = '/addWord/';
+  }
+})
