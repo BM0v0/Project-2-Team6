@@ -6,7 +6,11 @@ module.exports = function(app) {
     res.render("index", {});
   });
   app.get("/addWord", function(req, res) {
-    res.render("addWord", {});
+    if (req.cookies.approved === 'true') {
+      res.render("addWord", {});
+    } else {
+      res.render('index');
+    }
   });
 
   // Load example page and pass in an example by id

@@ -60,12 +60,37 @@
           <button type="submit" id="letterSelectSubmit" class="btn">Go</button>
         </form>
         <br>
-        <a href="/addWord/"><button id="createWordBtn" class="btn">Add Your Own Word</button></a>
+        <button id="createWordBtn" class="btn">Add Your Own Word</button>
       </div>
     </div>
     <div id="wordView" class="col-8">
       <div class="p-2" id="rightCol">
         <p>Here is where words can be viewed</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form" class="login-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" class="form-control" />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" class="form-control" />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary login-submit" id="login-submit">Submit</button>
       </div>
     </div>
   </div>
