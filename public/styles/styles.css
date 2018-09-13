@@ -70,7 +70,7 @@ body {
 }
 
 #wordInput {
-  color: yellow;
+  color: blue;
   font-weight: bold;
 }
 
@@ -88,4 +88,9 @@ body {
 
 div.form-group {
   color: #f8f9fa;
+}
+
+.p-2 {
+  background-color: rgb(59, 59, 59);
+  font-size: 150%;
 }
