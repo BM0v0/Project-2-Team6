@@ -6,10 +6,10 @@ module.exports = function(app) {
     res.render("index", {});
   });
   app.get("/addWord", function(req, res) {
-    if (req.cookies.approved === 'true') {
+    if (req.cookies.approved === "true") {
       res.render("addWord", {});
     } else {
-      res.render('index');
+      res.render("index");
     }
   });
 
